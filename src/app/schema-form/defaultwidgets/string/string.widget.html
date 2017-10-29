@@ -1,0 +1,14 @@
+<input *ngIf="this.getInputType()==='hidden'; else notHiddenFieldBlock"
+        [attr.name]="name" type="hidden" [formControl]="control">
+<ng-template #notHiddenFieldBlock>
+  <mat-form-field class="full-width" [hintLabel] = "schema.description" >
+    <input matInput [name]="name" [attr.readonly]="(schema.widget.id!=='color') && schema.readOnly?true:null"
+           [attr.placeholder]="schema.title"
+           [attr.type]="this.getInputType()"
+           [attr.id]="id"  [formControl]="control"
+           [attr.maxLength]="schema.maxLength || null"
+           [attr.minLength]="schema.minLength || null"
+           [attr.disabled]="(schema.widget.id=='color' && schema.readOnly)?true:null">
+    <input matInput *ngIf="(schema.widget.id==='color' && schema.readOnly)" [attr.name]="name" type="hidden" [formControl]="control">
+  </mat-form-field>
+</ng-template>

@@ -1,0 +1,11 @@
+<div >
+  <label [attr.for]="id" >
+    {{ schema.title }}
+  </label>
+  <span *ngIf="schema.description" >{{schema.description}}</span>
+  <input [name]="name" ng2FileSelect  [attr.id]="id"
+         [formControl]="control" type="file" [attr.disabled]="schema.readOnly?true:null"
+         [uploader]="uploader"
+         (change)="selectedFileOnChanged($event)">
+  <input *ngIf="schema.readOnly" [attr.name]="name" type="hidden" [formControl]="control">
+</div>

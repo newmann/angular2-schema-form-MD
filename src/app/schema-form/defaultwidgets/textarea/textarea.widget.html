@@ -1,0 +1,7 @@
+<mat-form-field class="full-width" [hintLabel] = "schema.description">
+	<textarea matInput [attr.readonly]="schema.readOnly" [name]="name"
+            [attr.placeholder]="schema.title"
+            [attr.maxLength]="schema.maxLength || null"
+            [attr.minLength]="schema.minLength || null"
+            [formControl]="control"></textarea>
+</mat-form-field>

@@ -23,8 +23,11 @@ import {
   MatToolbarModule,
   MatTooltipModule,
   MatRadioModule,
-  MatInputModule
+  MatInputModule,
+  MatFormFieldModule
 } from '@angular/material';
+
+import { FileUploadModule } from 'ng2-file-upload';
 
 @NgModule({
   imports: [
@@ -54,7 +57,9 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     MatRadioModule,
-    MatInputModule
+    MatInputModule,
+    MatFormFieldModule,
+    FileUploadModule
   ]
 })
 export class MaterialComponentsModule { }

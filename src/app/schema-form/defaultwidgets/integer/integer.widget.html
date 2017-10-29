@@ -1,0 +1,9 @@
+<mat-form-field class="full-width" [hintLabel] = "schema.description" >
+  <input matInput
+      [attr.readonly]="schema.readOnly?true:null" [name]="name"
+         [attr.placeholder]="schema.title"
+         [formControl]="control"
+         [attr.type]="'number'" [attr.min]="schema.minimum" [attr.max]="schema.maximum"
+         [attr.maxLength]="schema.maxLength || null"
+         [attr.minLength]="schema.minLength || null">
+</mat-form-field>

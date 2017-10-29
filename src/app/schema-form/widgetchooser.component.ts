@@ -38,7 +38,7 @@ export class WidgetChooserComponent implements OnChanges {
       if (destroy) {
         this.ref.destroy();
       }
-    })
+    });
   }
 
   ngOnChanges() {

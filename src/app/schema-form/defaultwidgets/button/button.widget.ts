@@ -2,9 +2,10 @@ import {Component} from "@angular/core";
 
 @Component({
   selector: 'sf-button-widget',
-  template: '<button (click)="button.action($event)">{{button.label}}</button>'
+  templateUrl: './button.widget.html'
+
 })
 export class ButtonWidget {
-  public button
-  public formProperty
+  public button;
+  public formProperty;
 }

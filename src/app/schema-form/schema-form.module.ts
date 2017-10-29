@@ -29,6 +29,7 @@ import {WidgetRegistry} from './widgetregistry';
 import {DefaultWidgetRegistry} from './defaultwidgets';
 import {SchemaValidatorFactory, ZSchemaValidatorFactory} from './schemavalidatorfactory';
 import {FormElementComponentAction} from "./formelement.action.component";
+import {SharedModule} from "../shared/shared.module";
 
 const moduleProviders = [
   {
@@ -42,7 +43,7 @@ const moduleProviders = [
 ];
 
 @NgModule({
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, SharedModule],
   declarations: [
     FormElementComponent,
     FormElementComponentAction,

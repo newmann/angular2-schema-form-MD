@@ -19,10 +19,20 @@ export class AppComponent {
       "password": {
         "type": "string",
         "description": "密码",
+        "widget": "password",
         "buttons": [{
           "id": "reset",
           "label": "Reset"
         }]
+      },
+      "pageContent": {
+        "type": "string",
+        "description": "Page content",
+        "widget": {
+          "id": "richtext",
+          "plugins": "textcolor colorpicker",
+          "toolbar": "forecolor backcolor"
+        }
       },
       "rememberMe": {
         "type": "boolean",
@@ -39,8 +49,8 @@ export class AppComponent {
 
   // Declare a mapping between action ids and their event listener
   myActions = {
-    "alert": (property) => { alert(JSON.stringify(property.value)) },
-    "reset": (property) => { property.reset() }
+    "alert": (property) => { alert(JSON.stringify(property.value)); },
+    "reset": (property) => { property.reset(); }
   };
 
   myModel = {email: " john.doe@example.com"};

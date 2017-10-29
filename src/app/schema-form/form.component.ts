@@ -23,7 +23,7 @@ import {TerminatorService} from './terminator.service';
 
 export function useFactory(schemaValidatorFactory, validatorRegistry) {
   return new FormPropertyFactory(schemaValidatorFactory, validatorRegistry);
-};
+}
 
 @Component({
   selector: 'sf-form',
@@ -65,14 +65,14 @@ export class FormComponent implements OnChanges {
   @Output() onErrorChange = new EventEmitter<{ value: any[] }>();
 
   @Output() onErrorsChange = new EventEmitter<{value: any}>();
-  
+
   rootProperty: FormProperty = null;
 
   constructor(private formPropertyFactory: FormPropertyFactory,
               private actionRegistry: ActionRegistry,
               private validatorRegistry: ValidatorRegistry,
               private cdr: ChangeDetectorRef,
-              private terminator: TerminatorService,) {
+              private terminator: TerminatorService, ) {
   }
 
   ngOnChanges(changes: any) {

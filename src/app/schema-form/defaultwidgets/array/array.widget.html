@@ -1,0 +1,15 @@
+<div >
+  <label [attr.for]="id" >
+    {{ schema.title }}
+  </label>
+  <span *ngIf="schema.description" >{{schema.description}}</span>
+  <div *ngFor="let itemProperty of formProperty.properties; let i=index; trackBy:trackByIndex">
+    <sf-form-element [formProperty]="itemProperty"></sf-form-element>
+    <button (click)="removeItem(i)" mat-mini-fab color="warn">
+      <mat-icon>delete-forever</mat-icon>
+    </button>
+  </div>
+  <button (click)="addItem()" mat-mini-fab color="primary">
+    <mat-icon>plus</mat-icon>
+  </button>
+</div>
